@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="login_header">
+        <div class="logo">
+          <a href="../page/main.html">
+            <img src="../images/header/ncp-logo-black.svg" alt=""
+          /></a>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="login_wrap">
+          <div class="title">
+            <h1>로그인</h1>
+            <div class="lang">
+              <p class="lang_text">Languages</p>
+              <p id="lang">Languages</p>
+              <div class="lang_btn">
+                <i class="xi-angle-down" id="down1"></i>
+                <i class="xi-angle-up" id="up1"></i>
+              </div>
+            </div>
+
+            <div class="lang_slide">
+              <p>한국어</p>
+              <p>English</p>
+              <p>日本語</p>
+            </div>
+          </div>
+
+          <ul class="btns">
+            <li class="btn">
+              <i class="xi-check-circle"></i>
+              <p>메인 계정</p>
+            </li>
+            <li class="btn">
+              <i class="xi-check-circle"></i>
+              <p>서브 계정</p>
+            </li>
+          </ul>
+
+          <div class="info">
+            <input
+              type="email"
+              placeholder="아이디(이메일)를 입력해 주십시오."
+            />
+            <input type="password" placeholder="비밀번호를 입력해 주십시오." />
+          </div>
+
+          <div class="check_box">
+            <label for="chk1"
+              ><input type="checkbox" id="chk1" />
+              <p>아이디 저장</p></label
+            >
+          </div>
+
+          <div class="login_btn">로그인</div>
+
+          <div class="naver_btn_wrap">
+            <div class="naver_btn">
+              <i class="xi-naver"></i>
+              <p>네이버로 간편 로그인</p>
+            </div>
+          </div>
+
+          <div class="nav">
+            <p>회원 가입</p>
+            <ul class="find">
+              <li>아이디 찾기</li>
+              <li>비밀번호 찾기</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copy">© NAVER Cloud Corp. All Rights Reserved.</div>
+      </section>
+    </main>
+
+    <script>
+      $("#up1, #lang").hide();
+
+      $(".lang_text, #down1").on("click", function () {
+        $("#down1, .lang_text").hide();
+        $("#up1, #lang").show();
+      });
+      $("#lang, #up1").on("click", function () {
+        $("#up1, #lang").hide();
+        $("#down1, .lang_text").show();
+      });
+
+      $(".lang_slide").hide();
+
+      $(".lang_text, #down1").click(function () {
+        $(".lang_slide").stop().slideDown("fast");
+      });
+
+      $(".lang_slide").find("p:first").addClass("active");
+
+      $(".lang_slide p").click(function () {
+        if ($(this).hasClass("active")) {
+          $(".lang_slide p").removeClass("active");
+        } else {
+          $(".lang_slide p").removeClass("active");
+
+          $(this).addClass("active");
+        }
+      });
+
+      $(document).mouseup(function (e) {
+        if ($(".lang_slide").has(e.target).length === 0) {
+          $(".lang_slide").slideUp("fast");
+          $("#up1").hide();
+          $("#down1").show();
+          $("#lang").hide();
+          $(".lang_text").show();
+        }
+      });
+
+      // btn
+      $(".btns").find("li:first").addClass("active");
+
+      $(".btns li").click(function () {
+        if ($(this).hasClass("active")) {
+          $(".btns li").removeClass("active");
+        } else {
+          $(".btns li").removeClass("active");
+
+          $(this).addClass("active");
+        }
+      });
+    </script>
+  </body>
+</html>
