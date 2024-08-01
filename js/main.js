@@ -56,12 +56,14 @@ new Swiper(".business", {
 $(document).ready(function () {
   $(".tab-menu a").click(function (event) {
     event.preventDefault();
+
     $(this)
       .addClass("active")
       .parent()
       .siblings()
       .find("a")
       .removeClass("active");
+
     $($(this).attr("href")).addClass("active").siblings().removeClass("active");
   });
 });
