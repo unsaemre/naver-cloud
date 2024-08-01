@@ -174,7 +174,7 @@
   padding: 0 11px;
 }
 .detail_container .title .btn:hover {
-  background-color: #f7f7f7;
+  cursor: pointer;
 }
 .detail_container .s1 .item {
   display: flex;
