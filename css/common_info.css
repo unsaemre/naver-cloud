@@ -10,7 +10,6 @@
 }
 
 .header {
-  /* color: #fff; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -76,7 +75,6 @@
   align-items: center;
   justify-content: space-between;
   gap: 36px;
-  /* color: #fff; */
   padding: 0 160px;
   height: 80px;
   line-height: 80px;

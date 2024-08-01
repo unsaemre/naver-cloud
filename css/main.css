@@ -75,11 +75,13 @@
   transform: translate3d(0, 0, 0);
 }
 .s1 .swiper {
-  overflow: unset;
+  overflow-x: hidden;
 }
 .s1 .swiper-slide {
   position: relative;
   width: 412px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 .s1 .first {
   width: 790px;
@@ -105,10 +107,6 @@
   display: flex;
   gap: 6px;
 }
-.s1 .swiper-slide {
-  cursor: pointer;
-  transition: all 0.3s;
-}
 .s1 .swiper-slide .more {
   position: relative;
   width: 120px;
@@ -132,7 +130,7 @@
   height: 700px;
 }
 .s2 .swiper {
-  overflow: unset;
+  overflow-x: hidden;
 }
 .s2 .swiper-wrapper {
   display: flex;
@@ -262,7 +260,7 @@
   margin-top: 100px;
 }
 .s3 .swiper {
-  overflow: unset;
+  overflow-x: hidden;
 }
 .s3 .swiper-wrapper {
   display: flex;
@@ -391,7 +389,7 @@
   margin-bottom: 80px;
 }
 .s5 .swiper {
-  overflow: unset;
+  overflow-x: hidden;
 }
 .s5 ul li {
   border: 1px solid #ccc;
