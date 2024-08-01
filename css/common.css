@@ -770,3 +770,10 @@ body.active {
   flex-direction: column;
   gap: 8px;
 }
+.gobottom {
+  transition: transform 0.5s ease-in-out;
+}
+
+.rotated {
+  transform: rotate(180deg);
+}

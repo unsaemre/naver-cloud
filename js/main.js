@@ -40,19 +40,6 @@ new Swiper(".business", {
   },
 });
 
-// section 2
-// $(".icon").find("li:first").addClass("active");
-
-// $(".icon li").click(function () {
-//   if ($(this).hasClass("active")) {
-//     $(".icon li").removeClass("active");
-//   } else {
-//     $(".icon li").removeClass("active");
-
-//     $(this).addClass("active");
-//   }
-// });
-
 $(document).ready(function () {
   $(".tab-menu a").click(function (event) {
     event.preventDefault();
