@@ -86,12 +86,12 @@
             >
           </div>
 
-          <div class="login_btn">로그인</div>
+          <div class="login_btn"><a href="#">로그인</a></div>
 
           <div class="naver_btn_wrap">
             <div class="naver_btn">
               <i class="xi-naver"></i>
-              <p>네이버로 간편 로그인</p>
+              <p><a href="#">네이버로 간편 로그인</a></p>
             </div>
           </div>
 
@@ -158,6 +158,17 @@
 
           $(this).addClass("active");
         }
+      });
+
+      // next page
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("a");
+        links.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "../page/main.html";
+          });
+        });
       });
     </script>
   </body>

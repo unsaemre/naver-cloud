@@ -16,7 +16,7 @@
       sizes="16x16"
       href="/images/header/favicon.ico"
     />
-    <title>Detail</title>
+    <title>Naver Cloud - 김흥준</title>
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
@@ -57,21 +57,21 @@
 
         <!-- hero -->
         <section class="hero">
-          <div class="title">
+          <article class="title">
             <h2 class="fwb">나의 생산성을 높여주는 초대규모 AI</h2>
             <h1 class="fwb">HyperCLOVA X</h1>
             <div class="btns">
               <div class="btn1">
-                <p>AI 개발도구로 시작하기</p>
+                <a href="#"><p>AI 개발도구로 시작하기</p></a>
               </div>
               <div class="btn2">
                 <div class="play">
                   <i class="xi-play"></i>
                 </div>
-                <p>소개 영상 보기</p>
+                <a href="#"><p>소개 영상 보기</p></a>
               </div>
             </div>
-          </div>
+          </article>
           <div class="photo">
             <img src="../images/detail/detail_hero.png" alt="" />
           </div>
@@ -133,9 +133,11 @@
               <h1>LLM의 한계를 뛰어 넘는</h1>
               <h2>HyperCLOVA X</h2>
             </div>
-            <div class="btn">
-              <img src="../images/detail/detail_section01_btn.png" alt="" />
-            </div>
+            <a href="#">
+              <div class="btn">
+                <img src="../images/detail/detail_section01_btn.png" alt="" />
+              </div>
+            </a>
           </div>
 
           <div class="item">
@@ -173,7 +175,7 @@
             </div>
 
             <div class="btn">
-              <p>네이버 AI 윤리 준칙</p>
+              <p><a href="#">네이버 AI 윤리 준칙</a></p>
               <i class="xi-angle-right"></i>
             </div>
           </div>
@@ -217,7 +219,7 @@
             </div>
 
             <div class="btn">
-              <p>CLOVA Studio 자세히 보기</p>
+              <p><a href="#">CLOVA Studio 자세히 보기</a></p>
               <i class="xi-angle-right"></i>
             </div>
           </div>
@@ -390,7 +392,7 @@
                 </h3>
               </div>
               <div class="btn">
-                <p>파트너 제휴 신청</p>
+                <p><a href="#">파트너 제휴 신청</a></p>
               </div>
             </div>
           </div>
@@ -447,6 +449,17 @@
       $("#tab1").click(function () {
         $(".tab2").hide();
         $(".tab1").show();
+      });
+
+      // next page
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("a");
+        links.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "../page/info.html";
+          });
+        });
       });
     </script>
   </body>

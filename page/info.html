@@ -16,7 +16,7 @@
       sizes="16x16"
       href="/images/header/favicon.ico"
     />
-    <title>info</title>
+    <title>Naver Cloud - 김흥준</title>
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
@@ -68,8 +68,8 @@
               서비스</span
             >
             <div class="btns">
-              <div class="btn1">이용 신청하기</div>
-              <div class="btn2">요금 계산하기</div>
+              <div class="btn1"><a href="#">이용 신청하기</a></div>
+              <div class="btn2"><a href="#">요금 계산하기</a></div>
             </div>
           </div>
         </div>
@@ -80,13 +80,17 @@
         <div class="section s1" id="section-01">
           <div class="title_wrap">
             <ul class="title floating-menu">
-              <li class="m"><a href="#section-01" class="menu-01">특징</a></li>
               <li class="m">
-                <a href="#section-02" class="menu-02">상세 기능</a>
+                <a href="#section-01" class="menu-01 exclude">특징</a>
               </li>
-              <li class="m"><a href="#section-03" class="menu-03">요금</a></li>
               <li class="m">
-                <a href="#section-04" class="menu-04"
+                <a href="#section-02" class="menu-02 exclude">상세 기능</a>
+              </li>
+              <li class="m">
+                <a href="#section-03" class="menu-03 exclude">요금</a>
+              </li>
+              <li class="m">
+                <a href="#section-04" class="menu-04 exclude"
                   >사용 가이드 <i class="xi-external-link"></i
                 ></a>
               </li>
@@ -371,7 +375,9 @@
           </ul>
         </div>
 
-        <div class="use_btn"><h5>이용 신청하기</h5></div>
+        <div class="use_btn">
+          <h5><a href="#">이용 신청하기</a></h5>
+        </div>
       </section>
     </main>
     <footer></footer>
@@ -397,22 +403,6 @@
         var $menu = $(".floating-menu li.m"),
           $contents = $(".scroll"),
           $doc = $("html, body");
-        $(function () {
-          // 해당 섹션으로 스크롤 이동
-          // $menu.on("click", "a", function (e) {
-          //   var $target = $(this).parent(),
-          //     idx = $target.index(),
-          //     section = $contents.eq(idx),
-          //     offsetTop = section.offset().top - 30;
-          //   $doc.stop().animate(
-          //     {
-          //       scrollTop: offsetTop,
-          //     },
-          //     300
-          //   );
-          //   return false;
-          // });
-        });
 
         // menu class 추가
         $(window).scroll(function () {
@@ -508,6 +498,17 @@
           $("#currency_text2").hide();
           $("#currency_text1").show();
         }
+      });
+
+      //  next page
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("a:not(.exclude)");
+        links.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "../page/login.html";
+          });
+        });
       });
     </script>
   </body>
